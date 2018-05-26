@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="log.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+           $("#sub").click(function(e){
+                e.preventDefault();
+                if($("#pswd").val()=='tam'){
+                    // alert('Right password');
+                    window.location = "pro.html";
+                }else{
+                    //alert('Wrong Password');
+                    $("#msg").css("color","red")
+                    $("#msg").text('Wrong Password.')
+                }
+           });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="loginbox">
+    <img src="avatar.png" class="avatar">
+        <h1 >Login Here</h1>
+        <h2 id="msg"></h2>
+        <form id="form" >
+            <p>Username</p>
+            <input type="text" name="" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" id="pswd" name="" placeholder="Enter Password">
+            <input type="submit" name="" id="sub" value="Login">
+            <a href="#">Lost your password?</a><br>
+            <a href="pro.html">Don't have an account?</a>
+        </form>
+        
+    </div>
+
+</body>
+</head>
+</html>
